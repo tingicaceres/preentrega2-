@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head> <style src:"index: .css;"></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Simulador de Préstamos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Préstamos</h1>
+        
+        <div id="usuarioSection">
+            <form id="usuarioForm">
+                <h2>Crear Nuevo Usuario</h2>
+                <label for="nuevoNombre">Nombre del Usuario:</label>
+                <input type="text" id="nuevoNombre" name="nuevoNombre" required>
+                <button type="submit">Crear Usuario</button>
+            </form>
+        </div>
+        
+        <div id="prestamoSection" style="display:none;">
+            <h2>Simular Préstamo</h2>
+            <form id="prestamoForm">
+                <label for="nombre">Usuario:</label>
+                <select id="nombre" name="nombre" required></select>
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" required>
+                <label for="cuota">Cuota:</label>
+                <select id="cuota" name="cuota" required>
+                    <option value="1">1 cuota: sin interés</option>
+                    <option value="3">3 cuotas: 25% de interés</option>
+                    <option value="6">6 cuotas: 50% de interés</option>
+                    <option value="12">12 cuotas: 90% de interés</option>
+                </select>
+                              <button id="simularPrestamoBtn">Simular Préstamo</button>
+            </form>
+            <div id="resultado"></div>
+        </div>
+    </div>
+    <script src="conexion.js"></script>
+</body>
+</html>
